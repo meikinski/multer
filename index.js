@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
   res.send('Hello Multer!')
 })
 
+app.get('/upload', (req, res) => {
+  res.sendFile(__dirname + '/page.html')
+})
+
 app.post(
   '/upload-profile-pic',
   imageUploader.single('profile_pic'),
